@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:transitionName="photoToAnimate"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/profile" />
+
+            <TextView
+                android:textSize="20dp"
+                app:layout_constraintHorizontal_bias="0.05"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/anh"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Tên Sản Phẩm:"
+                app:layout_constraintTop_toBottomOf="@id/photo"/>
+            <TextView
+                android:id="@+id/tensanpham_thongtin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Áo nè "
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:layout_constraintLeft_toLeftOf="@id/anh"
+                app:layout_constraintTop_toBottomOf="@id/anh" />
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="@id/anh"
+                android:textSize="20dp"
+                android:id="@+id/txtgiasp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Giá sản phẩm:"
+                app:layout_constraintTop_toBottomOf="@id/tensanpham_thongtin"/>
+            <TextView
+                android:id="@+id/giasp_thongtin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textStyle="bold"
+                android:textColor="#FA0000"
+                android:text="100000"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtgiasp" />
+            <TextView
+                android:id="@+id/thongtinsanpham"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="20dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/giasp_thongtin"
+                tools:text="ádasdasd"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addToCartButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FF006400"
+        android:text="MUA"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
